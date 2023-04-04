@@ -1,0 +1,60 @@
+.sidewrapper {
+  background-color: #54b689;
+  height: 100%;
+  padding: 10px;
+}
+.user_name {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff;
+}
+.rounded_circle {
+  border-radius: 50% !important;
+}
+.name_section {
+  text-align: center;
+  padding: 20px 20px;
+}
+.profile_description {
+  text-align: center;
+  padding: 20px 20px;
+  font-size: 0.875rem;
+}
+.social_icon {
+  color: white;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+}
+
+.social_icon_wrapper ul {
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+.section_links {
+  padding: 20px;
+  cursor: pointer;
+}
+.section_links li:hover {
+  color: black;
+}
+.section_links ul {
+  display: inline;
+  font-weight: bold;
+  color: white;
+  /* display: inline; */
+}
+.menu_icon {
+  color: white;
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+}
+.section_links li {
+  display: flex;
+}
+.section_links button {
+  background-color: #336d52;
+  font-weight: bold;
+}
