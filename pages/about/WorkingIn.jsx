@@ -9,25 +9,7 @@ const techStack = [
   // Add more tech stack items here
 ];
 function WorkingIn() {
-  return (
-    <Swiper
-      spaceBetween={50}
-      slidesPerView={3}
-      pagination={{ clickable: true }}
-      breakpoints={{
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-    >
-      {techStack.map((techItem) => (
-        <SwiperSlide key={techItem.name}>
-          <img src={techItem.logo} alt={techItem.name} />
-          <p>{techItem.name}</p>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
+  return <></>;
 }
 
 export default WorkingIn;
