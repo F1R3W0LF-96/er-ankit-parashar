@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import wolf from "@/public/assets/images/wolfp.png";
-// import bubble from "@/public/assets/images/bubbles/6393.jpg";
 import styles from "@/styles/Gsap.module.css";
 import Image from "next/image";
 
@@ -60,14 +59,7 @@ const Index = () => {
                 </h2>
               </div>
               <div className={`absolute top-0 w-full h-full image-container`}>
-                <div className="absolute top-1/2 -translate-y-1/2 left-32">
-                  {/* <Image
-                    id={styles.big_bubble}
-                    alt="bubble"
-                    src={bubble}
-                    className="relative top-0 -left-64 fill-gray-100"
-                  /> */}
-                </div>
+                <div className="absolute top-1/2 -translate-y-1/2 left-32"></div>
                 <div className="absolute hidden md:inline-block brand-logo left-1/3 top-1/2 -translate-y-1/2 text-gray-700 ">
                   <Image
                     className={styles.image}
