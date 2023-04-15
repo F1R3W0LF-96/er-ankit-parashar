@@ -1,16 +1,33 @@
 import React, { Suspense, useEffect, useState } from "react";
 import styles from "@/styles/About.module.css";
 import Loader from "@/components/loading/Loader";
-import LogoSection from "./LogoSection";
-import WorkingIn from "./WorkingIn";
+import AboutMe from "./AboutMe";
 
 function index() {
   const [loading, setLoading] = useState(false);
+  const [showHeaderClass, setShowHeaderClass] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+  }, []);
+
+  useEffect(() => {
+    function handleScroll() {
+      // setScrollPosition(window.scrollY);
+      if (window.scrollY > 10) {
+        setShowHeaderClass(true);
+      } else {
+        setShowHeaderClass(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -24,8 +41,12 @@ function index() {
               loading ? "inactive" : "active"
             }`}
           >
-            <div>
-              <header className={styles.header}>
+            <div style={{ height: "85px" }}>
+              <header
+                className={`${styles.header} ${
+                  showHeaderClass && styles.header_scroll
+                }`}
+              >
                 <nav className="flex container mx-auto items-center">
                   <span className="logo-text uppercase font-bold text-lg whitespace-nowrap flex items-baseline">
                     Ankit Parashar
@@ -67,10 +88,9 @@ function index() {
                 </nav>
               </header>
             </div>
-
-            <LogoSection />
-            {/* <WorkingIn /> */}
+            {/* <LogoSection /> */}
           </div>
+          <AboutMe />
         </Suspense>
       )}
     </>

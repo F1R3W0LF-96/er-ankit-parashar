@@ -5,10 +5,15 @@ import wolf from "@/public/assets/images/wolfp.png";
 import bubble from "@/public/assets/images/bubbles/bubble.png";
 import styles from "@/styles/LogoSection.module.css";
 import Image from "next/image";
+import WorkingIn from "./WorkingIn";
 
 function LogoSection() {
   useEffect(() => {
     const image = document.getElementById("brand-logo");
+    const brandName = document.getElementById("brandName");
+    const brandTagline = document.getElementById("brandTagline");
+    const big_bubble = document.getElementById("big_bubble");
+
     gsap.registerPlugin(ScrollTrigger);
     const tl1 = gsap.timeline({
       scrollTrigger: {
@@ -19,9 +24,13 @@ function LogoSection() {
         scrub: true, // enable smooth scrubbing
       },
     });
-    tl1.to(image, { translateX: 400, opacity: 1, delay: 5, duration: 10 });
 
-    const brandName = document.getElementById("brandName");
+    tl1.to(image, {
+      translateX: 400,
+      opacity: 1,
+      delay: 5,
+      duration: 10,
+    });
 
     const tl2 = gsap.timeline({
       scrollTrigger: {
@@ -48,7 +57,6 @@ function LogoSection() {
       delay: 20,
       duration: 20,
     });
-    const brandTagline = document.getElementById("brandTagline");
 
     const tl4 = gsap.timeline({
       scrollTrigger: {
@@ -66,7 +74,6 @@ function LogoSection() {
       duration: 20,
       color: "white",
     });
-    const big_bubble = document.getElementById("big_bubble");
 
     const tl5 = gsap.timeline({
       scrollTrigger: {
@@ -91,6 +98,7 @@ function LogoSection() {
         <div className={styles.content}>
           <div
             className={`pin-spacer pin-spacer-hero-header ${styles.hero_header}`}
+            id="test-container"
           >
             <section
               id={styles.hero_header}
@@ -136,6 +144,7 @@ function LogoSection() {
               </div>
             </section>
           </div>{" "}
+          <WorkingIn />
         </div>
       </main>
     </>
