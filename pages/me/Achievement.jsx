@@ -7,23 +7,49 @@ SwiperCore.use([Autoplay, Pagination]);
 
 const achievements = [
   {
-    title: "Achievement 1",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Creative Website",
+    description:
+      "Developed and styled front-end components that met the requirements of mocks and user stories, resulting in successful and visually appealing websites and web applications.",
   },
   {
-    title: "Achievement 2",
+    title: "Contantly Released on Production",
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Processed pull requests for production deployments, ensuring timely and accurate releases of new features and updates.",
   },
   {
-    title: "Achievement 3",
+    title: "Understanding Industries Standards",
     description:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "Demonstrated industry experience in building websites and web applications, showing a strong understanding of web development best practices and standards.",
   },
   {
-    title: "Achievement 4",
+    title: "Javascript Expert",
     description:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "Specialized in JavaScript and gained professional experience working with C# and Angular, showcasing a diverse and versatile skill set.",
+  },
+  {
+    title: "Wide Technologies Skillset",
+    description:
+      "Expanded skill set to include React.js, React Native, TypeScript, Node.js, MongoDB, SASS, Web API, Micro-services, and AWS, demonstrating a willingness to learn and adapt to new technologies.",
+  },
+  {
+    title: "Team Handling",
+    description:
+      "Collaborated effectively with cross-functional teams, including designers, developers, and project managers, to deliver high-quality projects that met or exceeded expectations.",
+  },
+  {
+    title: "Problem Solver",
+    description:
+      "Proactively identified and solved technical issues, mitigating potential risks and ensuring smooth project delivery.",
+  },
+  {
+    title: "High Quality Work",
+    description:
+      "Contributed to the growth and success of the company by consistently delivering high-quality work and contributing to a positive team culture.",
+  },
+  {
+    title: "On Time product Delivery",
+    description:
+      "Successfully delivered projects on-time and within budget, resulting in satisfied clients and stakeholders.",
   },
 ];
 
@@ -45,7 +71,7 @@ const AchievementsSection = () => {
         <h2 className="text-3xl font-bold mb-4 flex justify-center items-center">
           My Achievements
         </h2>
-        <div className="relative">
+        <div className="relative w-3/4 justify-center flex items-center mx-auto">
           <Swiper {...swiperOptions}>
             {achievements.map((achievement, index) => (
               <SwiperSlide key={index}>
@@ -53,7 +79,7 @@ const AchievementsSection = () => {
                   <h3 className="text-xl font-bold mb-2 flex justify-center">
                     {achievement.title}
                   </h3>
-                  <p className="text-gray-700  flex justify-center">
+                  <p className="text-gray-700  flex justify-center text-center">
                     {achievement.description}
                   </p>
                 </div>

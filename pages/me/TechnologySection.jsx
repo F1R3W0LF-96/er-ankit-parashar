@@ -24,49 +24,51 @@ const technologies = [
   {
     name: "Javascript",
     icon: <Image src={javascriptimage} alt="React" height={40} width={40} />,
-    description: "A JavaScript library for building user interfaces.",
+    description:
+      "JavaScript is a scripting language for creating dynamically updating content, and pretty much",
   },
   {
     name: "React",
     icon: <Image src={reactimage} alt="React" height={40} width={40} />,
-    description: "A JavaScript library for building user interfaces.",
+    description:
+      "A JavaScript library for building user interfaces & its JavaScript-based UI development library. ",
   },
   {
     name: "Redux",
     icon: <Image src={reduximage} alt="Next.js" height={60} width={60} />,
     description:
-      "A React framework for building server-side rendered applications.",
+      "Redux helps you write applications that behave consistently, run in different environments",
   },
   {
     name: "Next.js",
     icon: <Image src={nextimage} alt="Next.js" height={60} width={60} />,
     description:
-      "A React framework for building server-side rendered applications.",
+      "Next.js is a React framework that gives you building blocks to create web applications.",
   },
   {
     name: "Angular.js",
     icon: <Image src={angularimage} alt="Next.js" height={60} width={60} />,
     description:
-      "A React framework for building server-side rendered applications.",
+      "AngularJS framework written in JavaScript. AngularJS is used as a JavaScript file",
   },
   {
     name: "Node.js",
     icon: <Image src={nodeimage} alt="Next.js" height={60} width={60} />,
     description:
-      "A React framework for building server-side rendered applications.",
+      "Node.js is an open source server environment.It runs on various platforms ",
   },
 
   {
     name: "CSS",
     icon: <Image src={cssimage} alt="Tailwind CSS" height={60} width={60} />,
     description:
-      "A utility-first CSS framework for rapidly building custom designs.",
+      "CSS describes how HTML elements are to be displayed on screen, paper, or in other media",
   },
   {
     name: "SASS",
     icon: <Image src={sassimage} alt="Tailwind CSS" height={60} width={60} />,
     description:
-      "A utility-first CSS framework for rapidly building custom designs.",
+      "Sass lets you use features that do not exist in CSS, like variables, nested rules, etc.",
   },
 
   {
@@ -75,7 +77,7 @@ const technologies = [
       <Image src={bootstrapimage} alt="Tailwind CSS" height={60} width={60} />
     ),
     description:
-      "A utility-first CSS framework for rapidly building custom designs.",
+      "Bootstrap is CSS Framework for responsive and mobile-first websites. ",
   },
   {
     name: "Material UI ",
@@ -83,7 +85,7 @@ const technologies = [
       <Image src={materialuiimage} alt="Tailwind CSS" height={60} width={60} />
     ),
     description:
-      "A utility-first CSS framework for rapidly building custom designs.",
+      "Material UI is React component library that implements Google's Material Design",
   },
   {
     name: "Tailwind CSS",
@@ -91,7 +93,7 @@ const technologies = [
       <Image src={tailwindimage} alt="Tailwind CSS" height={60} width={60} />
     ),
     description:
-      "A utility-first CSS framework for rapidly building custom designs.",
+      "A utility-first CSS framework with classes that can be composed to build any design",
   },
 ];
 
@@ -114,7 +116,7 @@ const TechnologySlider = () => {
           >
             {technologies.map((technology) => (
               <SwiperSlide key={technology.name}>
-                <div className="flex items-center">
+                <div className="flex items-center bg-white p-10 rounded-lg mr-5 h-50 ">
                   <div className="flex-shrink-0">{technology.icon}</div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">
