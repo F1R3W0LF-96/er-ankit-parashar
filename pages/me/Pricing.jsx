@@ -5,7 +5,7 @@ function Pricing() {
     {
       id: 1,
       name: "Basic",
-      price: "$9.99/month",
+      price: "₹1000/month",
       features: [
         "10 GB of storage",
         "Unlimited projects",
@@ -16,7 +16,7 @@ function Pricing() {
     {
       id: 2,
       name: "Pro",
-      price: "$19.99/month",
+      price: "₹1500/month",
       features: [
         "50 GB of storage",
         "Unlimited projects",
@@ -28,7 +28,7 @@ function Pricing() {
     {
       id: 3,
       name: "Premium",
-      price: "$29.99/month",
+      price: "₹2000/month",
       features: [
         "100 GB of storage",
         "Unlimited projects",

@@ -108,7 +108,7 @@ const TechnologySlider = () => {
           <Swiper
             className="mySwiper"
             direction="horizontal"
-            autoplay={{ delay: 2000 }}
+            autoplay={{ delay: 4000 }}
             pagination={{ clickable: true }}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
@@ -117,7 +117,9 @@ const TechnologySlider = () => {
             {technologies.map((technology) => (
               <SwiperSlide key={technology.name}>
                 <div className="flex items-center bg-white p-10 rounded-lg mr-5 h-50 ">
-                  <div className="flex-shrink-0">{technology.icon}</div>
+                  <div className="flex-shrink-0 grayscale transition duration-500 hover:grayscale-0 hover:scale-125">
+                    {technology.icon}
+                  </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">
                       {technology.name}

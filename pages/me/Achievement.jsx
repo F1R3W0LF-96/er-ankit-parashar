@@ -24,7 +24,7 @@ const achievements = [
   {
     title: "Javascript Expert",
     description:
-      "Specialized in JavaScript and gained professional experience working with C# and Angular, showcasing a diverse and versatile skill set.",
+      "As a JavaScript expert, I possess a deep understanding of the language and its various features. I have extensive experience in writing efficient, secure, and scalable code using JavaScript.",
   },
   {
     title: "Wide Technologies Skillset",
@@ -39,24 +39,24 @@ const achievements = [
   {
     title: "Problem Solver",
     description:
-      "Proactively identified and solved technical issues, mitigating potential risks and ensuring smooth project delivery.",
+      "Proactively identified and solved technical issues, mitigating potential risks and ensuring smooth project delivery with optimum quality alongwith helping others to learn and grow.",
   },
   {
     title: "High Quality Work",
     description:
-      "Contributed to the growth and success of the company by consistently delivering high-quality work and contributing to a positive team culture.",
+      "Contributed to the growth and success of the company by consistently delivering high-quality work and contributing to a positive team culture. Managing the client with latest technical information",
   },
   {
     title: "On Time product Delivery",
     description:
-      "Successfully delivered projects on-time and within budget, resulting in satisfied clients and stakeholders.",
+      "Successfully delivered projects on-time and within budget, resulting in satisfied clients and stakeholders.With high quality work and providing large customers",
   },
 ];
 
 const AchievementsSection = () => {
   const swiperOptions = {
     autoplay: {
-      delay: 3000,
+      delay: 5000,
       disableOnInteraction: false,
     },
     pagination: {
