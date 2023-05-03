@@ -1,0 +1,15 @@
+.description {
+  /* font-family: "DynaPuff", cursive; */
+  /* font-family: "Lobster", cursive;
+  font-family: "Monoton", cursive; */
+  /* font-family: "Sedgwick Ave Display", cursive !important; */
+}
+
+.wrapper_image {
+  background-image: url(../public/assets/images/backgroundImage/bg2.jpeg);
+  background-size: cover;
+  padding-top: 75px;
+}
+.wrapper_styles * {
+  color: white;
+}

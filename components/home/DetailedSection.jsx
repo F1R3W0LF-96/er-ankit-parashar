@@ -4,6 +4,7 @@ import Image from "next/image";
 import pic from "@/public/assets/images/my_pic.jpeg";
 import File from "@/public/assets/images/menu/file-text.svg";
 import RightArrow from "@/public/assets/images/direction/right-arrow.svg";
+import { toast } from "react-toastify";
 
 function DetailedSection() {
   const [name, setName] = useState("");
@@ -28,9 +29,8 @@ function DetailedSection() {
       body: JSON.stringify(data),
     }).then((res) => {
       console.log("Response received", res);
-      debugger;
       if (res.status === 200) {
-        console.log("Response succeeded!");
+        toast.success("Mail sent sucessfully!");
         setName("");
         setEmail("");
         setMessage("");
@@ -66,42 +66,81 @@ function DetailedSection() {
                 View Resume
               </button>
             </div>
-            <input
-              type="text"
-              name="name"
-              className="bg-slate-200 text-black border-1 m-5 "
-              placeholder="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <input
-              type="text"
-              name="name"
-              className="bg-slate-200 text-black border-1 m-5 "
-              placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-              type="text"
-              name="name"
-              className="bg-slate-200 text-black border-1 m-5 "
-              placeholder="message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-            />
-            <button
-              className="rounded bg-gray-500"
-              onClick={(e) => {
-                handleSubmit(e);
-              }}
-            >
-              {" "}
-              send message
-            </button>
           </div>
           <div>
-            <Image src={pic} alt="image" />
+            <Image src={pic} alt="image" className="mb-5" />
+            <div class="w-full max-w-xs">
+              <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <div className="font-bold mb-5">
+                  Hire Me or Contact via Email !!!
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="name"
+                  >
+                    Username
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                    id="name"
+                    type="text"
+                    name="name"
+                    placeholder="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="email"
+                  >
+                    Your Email
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                    id="email"
+                    type="text"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="message"
+                  >
+                    Message
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                    id="message"
+                    type="text"
+                    placeholder="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                  />
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button"
+                    onClick={(e) => {
+                      handleSubmit(e);
+                    }}
+                  >
+                    Send Mail{" "}
+                  </button>
+                </div>
+              </form>
+              <p class="text-center text-gray-500 text-xs">
+                &copy;2020 Anky Corp. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </section>
