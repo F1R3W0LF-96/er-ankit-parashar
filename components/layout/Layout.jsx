@@ -7,12 +7,12 @@ function Layout({ children }) {
   console.log("router:", router);
   return (
     <>
-      <div class="grid grid-cols-4 ">
-        <div class=" ">{router.pathname === "/" && <SideSection />}</div>
-        <div class={`${router.pathname === "/" ? "col-span-3" : "col-span-4"}`}>
-          {children}
-        </div>
-      </div>
+      {/* <div class="grid grid-cols-4 "> */}
+      {/* <div class=" ">{router.pathname === "/" && <SideSection />}</div> */}
+      {/* <div class={`${router.pathname === "/" ? "col-span-3" : "col-span-4"}`}> */}
+      {children}
+      {/* </div> */}
+      {/* </div> */}
     </>
   );
 }

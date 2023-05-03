@@ -1,0 +1,32 @@
+.pricing_container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.pricing_tier {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pricing_tier h2 {
+  margin-bottom: 10px;
+}
+
+.pricing_tier h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.pricing_tier ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pricing_tier li {
+  margin-bottom: 10px;
+}

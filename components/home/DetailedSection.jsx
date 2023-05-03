@@ -29,7 +29,6 @@ function DetailedSection() {
       body: JSON.stringify(data),
     }).then((res) => {
       console.log("Response received", res);
-      debugger;
       if (res.status === 200) {
         toast.success("Mail sent sucessfully!");
         setName("");
