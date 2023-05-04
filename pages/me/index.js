@@ -6,6 +6,7 @@ import HeroSection from "./Hero";
 import AchievementsSection from "./Achievement";
 import Footer from "./Footer";
 import Pricing from "./Pricing";
+import Projects from "./Projects";
 // import video_url from "../../public/assets/video/bgvideo.mov";
 
 function Me() {
@@ -21,6 +22,7 @@ function Me() {
         </video> */}
         <TechnologySection />
         <AchievementsSection />
+        <Projects />
       </div>
 
       <Pricing />

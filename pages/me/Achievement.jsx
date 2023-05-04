@@ -2,6 +2,7 @@ import React from "react";
 import SwiperCore, { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
+import styles from "@/styles/Achivements.module.css";
 
 SwiperCore.use([Autoplay, Pagination]);
 
@@ -14,7 +15,7 @@ const achievements = [
   {
     title: "Contantly Released on Production",
     description:
-      "Processed pull requests for production deployments, ensuring timely and accurate releases of new features and updates.",
+      " I have been responsible for managing and processing pull requests for production deployments, ensuring that new features and updates are released accurately and on time. ",
   },
   {
     title: "Understanding Industries Standards",
@@ -66,7 +67,10 @@ const AchievementsSection = () => {
   };
 
   return (
-    <section className="bg-gray-100 pt-10 pb-10 ">
+    <section
+      className="bg-gray-100 pt-10 pb-10 "
+      id={styles.achivement_background}
+    >
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4 flex justify-center items-center">
           My Achievements

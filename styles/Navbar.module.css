@@ -24,6 +24,7 @@ nav.navbar-wrapper a:hover {
     rgba(255, 255, 255, 0.6)
   );
   backdrop-filter: blur(10px);
+  /* background-image: url(../public/assets/images/headerNav.jpeg); */
 }
 .scrolled {
   background: linear-gradient(

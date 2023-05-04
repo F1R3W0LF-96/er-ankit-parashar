@@ -30,3 +30,9 @@
 .pricing_tier li {
   margin-bottom: 10px;
 }
+
+#pricing_bg {
+  background-image: url(../public/assets/images/pricing.jpeg);
+  /* background-repeat: no-repeat;  */
+  background-size: cover;
+}

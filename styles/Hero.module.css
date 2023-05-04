@@ -6,10 +6,10 @@
 }
 
 .wrapper_image {
-  background-image: url(../public/assets/images/backgroundImage/bg2.jpeg);
+  background-image: url(../public/assets/images/hex.jpg);
   background-size: cover;
   padding-top: 75px;
 }
 .wrapper_styles * {
-  color: white;
+  color: black;
 }

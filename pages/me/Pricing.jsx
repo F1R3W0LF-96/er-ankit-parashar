@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "@/styles/Pricing.module.css";
+import techStyles from "@/styles/TechnologySection.module.css";
+
 function Pricing() {
   const tiers = [
     {
@@ -40,11 +42,15 @@ function Pricing() {
     },
   ];
   return (
-    <div className="m-5">
+    <div className="m-5" id={styles.pricing_bg}>
       <h1 className="text-3xl font-bold text-center mb-8">Pricing</h1>
       <div className="flex flex-wrap justify-center gap-8">
         {tiers.map((tier) => (
-          <div key={tier.id} className="bg-white shadow-lg rounded-lg p-6">
+          <div
+            key={tier.id}
+            className="bg-white shadow-lg rounded-lg p-6"
+            // id={techStyles.technology_background}
+          >
             <h2 className="text-2xl font-bold mb-4">{tier.name}</h2>
             <h3 className="text-4xl font-bold mb-8">{tier.price}</h3>
             <ul className="text-lg mb-8">

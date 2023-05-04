@@ -25,7 +25,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" legacyBehavior>
-          <a className="text-white text-lg font-bold hover:border-b-2 hover:border-black hover:border-opacity-50">
+          <a className="text-black text-lg font-bold hover:border-b-2 hover:border-black hover:border-opacity-50">
             ANKIT PARASHAR
           </a>
         </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
             {menuOpen ? (
               <button
                 type="button"
-                className="text-white hover:text-secondary focus:outline-none"
+                className="text-black hover:text-secondary focus:outline-none"
                 onClick={() => setMenuOpen(false)}
               >
                 <XIcon className="h-6 w-6" />
@@ -42,7 +42,7 @@ export default function Navbar() {
             ) : (
               <button
                 type="button"
-                className="text-white hover:text-secondary focus:outline-none"
+                className="text-black hover:text-secondary focus:outline-none"
                 onClick={() => setMenuOpen(true)}
               >
                 <MenuIcon className="h-6 w-6" />
@@ -51,13 +51,13 @@ export default function Navbar() {
           </div>
           <div className={`md:flex ${menuOpen ? "flex" : "hidden"}`}>
             <Link href="#about" legacyBehavior>
-              <a className="text-white font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
+              <a className="text-black font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
                 About
               </a>
             </Link>
             <Link href="tel:701-888-8060" legacyBehavior>
               <a
-                className="text-white font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50"
+                className="text-black font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50"
                 onClick={(e) => {
                   e.preventDefault();
                   window.location.href = "tel:701-888-8060";
@@ -67,13 +67,13 @@ export default function Navbar() {
               </a>
             </Link>
             <Link href="/hire-me" legacyBehavior>
-              <a className="text-white font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
+              <a className="text-black font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
                 Hire Me
               </a>
             </Link>
-            <Link href="#footer" legacyBehavior>
-              <a className="text-white font-bold  block md:inline-block md:mt-0 hover:border-b-2 hover:border-black hover:border-opacity-50">
-                Portfolio
+            <Link href="#projects" legacyBehavior>
+              <a className="text-black font-bold  block md:inline-block md:mt-0 hover:border-b-2 hover:border-black hover:border-opacity-50">
+                Projects
               </a>
             </Link>
           </div>

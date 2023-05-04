@@ -57,13 +57,13 @@ const HeroSection = () => {
                 Hello, I'm Ankit Parashar
               </h1>
               <p
-                className={`text-lg md:text-xl text-gray-600 mb-8 ${styles.description}`}
+                className={`text-lg md:text-xl text-gray-600  mb-8 ${styles.description}`}
               >
                 I am a MERN FULL STACK DEVELOPER 💻 , I have in depth knowledge
                 of HTML5, CSS3, Vanilla JavaScript, React.js, Node.js,
                 Express.js, MongoDB and Git.
               </p>
-              <p className="text-lg md:text-xl text-gray-600 mb-8 font-sans">
+              <p className="text-lg md:text-xl text-gray-600 mb-8 font-sans font-bold">
                 ⚡Technologies:
               </p>
               <ul className="list-disc list-inside mb-8 text-gray-600 font-sans">
@@ -85,6 +85,7 @@ const HeroSection = () => {
               <button
                 className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
                 onClick={() => setOpen(true)}
+                style={{ color: "white" }}
               >
                 Get in touch
               </button>

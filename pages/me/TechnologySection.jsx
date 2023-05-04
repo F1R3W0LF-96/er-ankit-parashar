@@ -1,6 +1,7 @@
 import React from "react";
 import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "@/styles/TechnologySection.module.css";
 import { ArrowDownIcon } from "@heroicons/react/solid";
 import reactimage from "@/public/assets/images/technology/react/react.png";
 import nextimage from "@/public/assets/images/technology/nextjs-icon.png";
@@ -99,7 +100,10 @@ const technologies = [
 
 const TechnologySlider = () => {
   return (
-    <div className="bg-gray-100 py-10">
+    <div
+      className="bg-gray-100 py-10 hidden md:block"
+      id={styles.technology_background}
+    >
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl font-extrabold text-gray-900 justify-center items-center flex">
           Technologies I Work With
@@ -117,7 +121,7 @@ const TechnologySlider = () => {
             {technologies.map((technology) => (
               <SwiperSlide key={technology.name}>
                 <div className="flex items-center bg-white p-10 rounded-lg mr-5 h-50 ">
-                  <div className="flex-shrink-0 grayscale transition duration-500 hover:grayscale-0 hover:scale-125">
+                  <div className="flex-shrink-0 grayscale transition duration-500 hover:grayscale-0 hover:scale-150">
                     {technology.icon}
                   </div>
                   <div className="ml-4">
