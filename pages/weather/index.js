@@ -15,7 +15,6 @@ function Weather() {
   const search = () => {
     getWeather();
   };
-
   const getWeather = () => {
     axios
       .get(
