@@ -8,7 +8,7 @@ function Projects() {
       description:
         "A weather app built with React that displays the current weather and 5-day forecast for any location using the OpenWeather API.",
       image:
-        "https://www.theschoolrun.com/sites/theschoolrun.com/files/weather_.jpg",
+        "https://mir-s3-cdn-cf.behance.net/projects/404/7ba585161415993.Y3JvcCwxMzgwLDEwODAsMjU5LDA.png",
       demo: "/weather",
       code: "https://github.com/your-username/react-weather-app",
     },
@@ -55,7 +55,7 @@ function ProjectCard({ project }) {
       <img
         src={project.image}
         alt={project.title}
-        className="h-48 w-full object-contain"
+        className=" w-full object-cover"
       />
       <div className="p-4">
         <h3 className="text-lg font-bold text-gray-800 mb-2">

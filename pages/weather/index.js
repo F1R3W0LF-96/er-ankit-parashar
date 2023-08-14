@@ -26,7 +26,18 @@ function Weather() {
         const { icon, description } = weatherData.weather[0];
         const { temp, humidity } = weatherData.main;
         const { speed } = weatherData.wind;
-        document.querySelector(".city").innerHTML = "Weather in " + name;
+
+        const date = new Date(weatherData.dt * 1000); // Multiply by 1000 to convert to milliseconds
+        const monthOptions = { month: "long" };
+        const dayOptions = { day: "numeric", weekday: "long" };
+
+        const formattedMonth = date.toLocaleDateString("en-US", monthOptions);
+        const formattedDay = date.toLocaleDateString("en-US", dayOptions);
+
+        document.querySelector(".weather-date").innerHTML =
+          formattedMonth + " " + formattedDay;
+        document.querySelector(".city").innerHTML = name;
+
         document.querySelector(".icon").src =
           "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.querySelector(".description").innerText = description;
@@ -58,42 +69,62 @@ function Weather() {
   return (
     <div class="flex h-screen justify-center items-center">
       <div class="w-96">
-        <div id="search" class="flex justify-center mb-4 shadow-md rounded-md">
+        <div id="search" class="flex justify-center mb-4 rounded-md">
           <input
             type="text"
-            class="search-bar px-2 py-1 rounded-l-lg w-3/4 text-white"
+            class="search-bar px-5 py-3 rounded-l-lg w-full text-gray-800 placeholder-gray-500 focus:outline-none"
             placeholder="Search City..."
             onChange={(e) => setCity(e.target.value)}
             onKeyDown={(e) => keyPresshandler(e)}
           />
           <button
-            class="search-button rounded-r-lg bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4"
+            class="search-button rounded-r-lg bg-blue-500 hover:bg-blue-700 text-white font-semibold py-3 px-6 focus:outline-none"
             onClick={() => search()}
           >
             <svg
+              class="h-6 w-6"
+              fill="none"
               stroke="currentColor"
-              fill="currentColor"
-              stroke-width="0"
-              version="1.1"
-              viewBox="0 0 16 16"
-              height="1.5em"
-              width="1.5em"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M15.504 13.616l-3.79-3.223c-0.392-0.353-0.811-0.514-1.149-0.499 0.895-1.048 1.435-2.407 1.435-3.893 0-3.314-2.686-6-6-6s-6 2.686-6 6 2.686 6 6 6c1.486 0 2.845-0.54 3.893-1.435-0.016 0.338 0.146 0.757 0.499 1.149l3.223 3.79c0.552 0.613 1.453 0.665 2.003 0.115s0.498-1.452-0.115-2.003zM6 10c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4z"></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a4 4 0 11-8 0 4 4 0 018 0zm3.31 3.31a8 8 0 10-12.02 0m12.02 0l5 5"
+              ></path>
             </svg>
           </button>
         </div>
-        <div class="weather loader bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-          <h2 class="city"></h2>
-          <div class="flex">
-            <img class="icon" src="" alt="" />
-            <div class="description"></div>
-            <div class="temp"></div>
+        <div class="weather backdrop-blur-md rounded-lg shadow-lg p-6 flex flex-col items-center transition duration-150 ease-in-out">
+          <div className="flex flex-col">
+            <div className="flex flex-col">
+              <span class="city text-xl font-semibold mb-2 text-white">
+                City Name
+              </span>
+              <span>
+                <img class="icon h-100 w-100" src="" alt="Weather Icon" />
+              </span>
+            </div>
+
+            <div class="weather-date text-xl font-semibold mb-2 text-white">
+              Date
+            </div>
+
+            <div class="flex items-center space-x-2">
+              {/* <img class="icon h-100 w-100" src="" alt="Weather Icon" /> */}
+              <div class="description text-white"></div>
+              <div class="temp text-blue-600 text-lg font-semibold"></div>
+            </div>
           </div>
-          <div class="flex-bottom">
-            <div class="humidity"></div>
-            <div class="wind"></div>
+          <div class="flex-bottom mt-2">
+            <div class="humidity text-white">
+              Humidity: <span class="font-semibold">60%</span>
+            </div>
+            <div class="wind text-white ml-4">
+              Wind: <span class="font-semibold">10 mph</span>
+            </div>
           </div>
         </div>
       </div>
