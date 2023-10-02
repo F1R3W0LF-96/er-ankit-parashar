@@ -50,7 +50,7 @@ export default function Navbar() {
             )}
           </div>
           <div className={`md:flex ${menuOpen ? "flex" : "hidden"}`}>
-            <Link href="#about" legacyBehavior>
+            <Link href="/#about" legacyBehavior>
               <a className="text-black font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
                 About
               </a>
@@ -66,12 +66,12 @@ export default function Navbar() {
                 Contact
               </a>
             </Link>
-            <Link href="/hire-me" legacyBehavior>
+            <Link href="/#technologies" legacyBehavior>
               <a className="text-black font-bold  block md:inline-block md:mt-0 mr-4 hover:border-b-2 hover:border-black hover:border-opacity-50">
-                Hire Me
+                Expertise
               </a>
             </Link>
-            <Link href="#projects" legacyBehavior>
+            <Link href="/#projects" legacyBehavior>
               <a className="text-black font-bold  block md:inline-block md:mt-0 hover:border-b-2 hover:border-black hover:border-opacity-50">
                 Projects
               </a>

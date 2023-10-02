@@ -23,6 +23,10 @@ const nextConfig = {
     );
     return config;
   },
+  publicRuntimeConfig: {
+    PIXABAY_BASE_URL: "https://pixabay.com/api/",
+    PIXABAY_SECRET_KEY: "11903245-c6f2294b80d77d1fd7402ea4e",
+  },
 };
 
 module.exports = withTM(nextConfig);

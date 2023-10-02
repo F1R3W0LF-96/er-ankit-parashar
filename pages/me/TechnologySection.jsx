@@ -100,45 +100,46 @@ const technologies = [
 
 const TechnologySlider = () => {
   return (
-    <div
-      className="bg-gray-100 py-10 hidden md:block"
-      id={styles.technology_background}
-    >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-extrabold text-gray-900 justify-center items-center flex">
-          Technologies I Work With
-        </h2>
-        <div className="mt-8">
-          <Swiper
-            className="mySwiper"
-            direction="horizontal"
-            autoplay={{ delay: 4000 }}
-            pagination={{ clickable: true }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            slidesPerView={3}
-          >
-            {technologies.map((technology) => (
-              <SwiperSlide key={technology.name}>
-                <div className="flex items-center bg-white p-10 rounded-lg mr-5 h-50 ">
-                  <div className="flex-shrink-0 grayscale transition duration-500 hover:grayscale-0 hover:scale-150">
-                    {technology.icon}
+    <section id="technologies">
+      <div
+        className="bg-gray-100 py-10 hidden md:block"
+        id={styles.technology_background}
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-5xl font-extrabold text-gray-900 justify-center items-center flex">
+            Technologies I Work With
+          </h2>
+          <div className="mt-8">
+            <Swiper
+              className="mySwiper"
+              direction="horizontal"
+              autoplay={{ delay: 4000 }}
+              pagination={{ clickable: true }}
+              onSlideChange={() => console.log("slide change")}
+              onSwiper={(swiper) => console.log(swiper)}
+              slidesPerView={3}
+            >
+              {technologies.map((technology) => (
+                <SwiperSlide key={technology.name}>
+                  <div className="flex items-center bg-white p-10 rounded-lg mr-5 h-50 ">
+                    <div className="flex-shrink-0 grayscale transition duration-500 hover:grayscale-0 hover:scale-150">
+                      {technology.icon}
+                    </div>
+                    <div className="ml-4">
+                      <h3 className="text-lg font-medium text-gray-900">
+                        {technology.name}
+                      </h3>
+                      <p className="mt-2 text-sm text-gray-500">
+                        {technology.description}
+                      </p>
+                    </div>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">
-                      {technology.name}
-                    </h3>
-                    <p className="mt-2 text-sm text-gray-500">
-                      {technology.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-      </div>
-      {/* <div className="text-center mt-8">
+        {/* <div className="text-center mt-8">
         <a
           href="#about"
           className="inline-flex items-center justify-center p-2 rounded-md bg-indigo-500 text-white hover:bg-indigo-600"
@@ -147,7 +148,8 @@ const TechnologySlider = () => {
           <ArrowDownIcon className="h-5 w-5 ml-2" aria-hidden="true" />
         </a>
       </div> */}
-    </div>
+      </div>
+    </section>
   );
 };
 
